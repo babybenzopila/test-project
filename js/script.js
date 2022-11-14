@@ -1,12 +1,25 @@
 "use strict";
+// 1
+const question = prompt('Сколько фильмов вы посмотрели?', '');
+const numberOfFilms = [question];
 
-// const test = +prompt('How old are you?');
-// console.log(test + 10);
 
-const answers = [];
+const filmName = prompt('Какой фильм вы посмотрели последним?', '');
+const filmRate = prompt('Какую оценку вы поставите фильму?', '');
 
-answers[0] = prompt('Как ваше имя?', '');
-answers[1] = prompt('Как ваша фамилия?', '');
-answers[2] = prompt('Как ваше отчество?', '');
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+};
 
-console.log(answers);
+personalMovieDB.movies[filmName] = filmRate;
+
+console.log(personalMovieDB);
+
+
+
+
+
